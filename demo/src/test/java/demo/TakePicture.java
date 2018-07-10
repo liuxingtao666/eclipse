@@ -4,9 +4,7 @@ package demo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.touch.UpAction;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
