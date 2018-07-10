@@ -18,7 +18,7 @@ public class BasePage {
 	}
 	
 	/*
-	 * 定位element
+	 * 封装定位element
 	 * @Parameter By by
 	 */
 	public WebElement element(By by){
@@ -37,5 +37,26 @@ public class BasePage {
 		}else{
 			log.error(element+"：没有该元素，点击失败");
 		}
+	}
+	/*
+	 * 封装输入
+	 */
+	
+	public void sendKeys(WebElement element,String keys) {
+		if (element!=null) {
+			
+			element.sendKeys(keys);
+		}else{
+			log.error(element+":该元素找不到，输入失败");
+		}
+	}
+	
+	/*
+	 * 判断元素是否显示
+	 */
+	public boolean isDisplayed(WebElement element) {
+	 
+			return	element.isDisplayed();
+		 
 	}
 }
