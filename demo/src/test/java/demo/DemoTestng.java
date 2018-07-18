@@ -24,7 +24,7 @@ public class DemoTestng {
 	
 	//登陆
 	@Test(dependsOnMethods={"InitDriver"})
-	public void  login_imocc() throws InterruptedException{
+	public void imooc() throws InterruptedException{
 		driver.get("https://www.imooc.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.id("js-signin-btn")).click();
@@ -41,11 +41,10 @@ public class DemoTestng {
 		if ("慕粉1917095012".equals(name)) {
 		System.out.println("用例通过");
 		}else{
-			System.out.println("用例不通过");
-		}
-		
-		 
+		System.out.println("用例不通过");
 	}
-	
-	 
+
+	}
+
+
 }

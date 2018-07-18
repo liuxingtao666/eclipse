@@ -4,8 +4,8 @@ package util;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
-import demo.BaseDriver;
-import demo.TakePicture;
+import base.BaseDriver;
+
 
 public class TestngListener extends TestListenerAdapter{
 
@@ -25,7 +25,7 @@ public void onTestFailure(ITestResult arg0) {
 
 private void dotake(ITestResult tr) throws Exception {
 	
-	BaseDriver tp=(TakePicture)tr.getInstance();
+	BaseDriver tp=(BaseDriver)tr.getInstance();
 	tp.dotake();
 	
 }

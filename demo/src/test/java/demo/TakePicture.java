@@ -5,9 +5,11 @@ package demo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import base.BaseDriver;
 import util.PropUtil;
 import util.TestngListener;
 
@@ -17,6 +19,12 @@ import util.TestngListener;
 	  *  封住手动截图方法实现在TestngListener.java中
 	  */
 
+
+		public TakePicture(String browser) {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 				//初始化driver
 				public void InitDriver() throws InterruptedException{
 					String  url="https://www.imooc.com";
@@ -25,8 +33,8 @@ import util.TestngListener;
 					driver.findElement(By.id("js-signin-btn")).click();
 					Thread.sleep(3000);
 				}
-				
 				//登陆
+				
 				public void  loginScript(String para_user,String para_pass) throws InterruptedException, Exception{
 					 
 					 
@@ -46,11 +54,14 @@ import util.TestngListener;
 					WebElement logo=this.findele(this.pack_by("logo"));
 					Actions builder = new Actions(driver);
 					builder.moveToElement(logo).perform(); 
-					String name=this.findele(By.cssSelector("header-user-card > div > div > div.card-top.clearfix > div > a > span")).getText();
-					if ("65656".equals(name)) {
+					String name=this.findele(By.cssSelector("#header-user-card > div > div > div.card-top.clearfix > div > a > span")).getText();
+					if ("慕粉191709501".equals(name)) {
+						
 					System.out.println("用例通过");
 					
 					}else{
+						Assert.fail();
+						
 						System.out.println("用例不通过");
 					}
 					//driver.close();
@@ -90,9 +101,8 @@ import util.TestngListener;
 			
 		@Test
 		public void testdemo() throws Exception {
-			TakePicture login=new TakePicture();
-			login.InitDriver();
-			login.loginScript("18792749809", "20190523lmr");
+			this.InitDriver();
+			this.loginScript("18792749809", "20190523lmr");
 			
 			
 		}

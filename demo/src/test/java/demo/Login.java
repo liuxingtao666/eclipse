@@ -19,7 +19,6 @@ public class Login {
 		System.setProperty("webdriver.chrome.driver", "D:\\Program Files\\chromedriver.exe");
 		driver=new ChromeDriver();
 	}
-	
 	//登陆
 	public void  login_imocc() throws InterruptedException{
 		driver.get("https://www.imooc.com");
@@ -40,10 +39,8 @@ public class Login {
 		}else{
 			System.out.println("用例不通过");
 		}
-		
-		 
 	}
-	
+
 	//入口
 	public static void main(String[] args) throws Exception{
 		Login  login=new Login();
