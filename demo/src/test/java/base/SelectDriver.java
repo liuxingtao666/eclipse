@@ -13,7 +13,7 @@ public class SelectDriver {
 	public  WebDriver driverName(){
 		String web = null;
 		try {
-			PropUtil p=new PropUtil("conf.properties");
+			PropUtil p=new PropUtil("my.properties");
 			web = p.getProp("brower");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
