@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="demo">
+    <test name="demo">
+        <groups>
+            <run>
+                <include name="666">
+                </include>
+            </run>
+        </groups>
+        <classes>
+            <class name="groups.groupsclass"></class>
+            <class name="groups.groupsclass2"></class>
+        </classes>
+    </test>
+</suite>

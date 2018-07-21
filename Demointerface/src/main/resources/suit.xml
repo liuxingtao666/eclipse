@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<suite name="淘宝测试套件">
+
+
+<test name="登陆">
+    <classes>
+        <class name="suit.suitconfig"/>
+        <class name="suit.login"/>
+
+    </classes>
+</test>
+
+<test name="支付">
+    <classes>
+        <class name="suit.suitconfig"/>
+        <class name="suit.pay"></class>
+    </classes>
+</test>
+</suite>

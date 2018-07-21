@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="threaddemo"  parallel="methods" thread-count="3">
+    <!--
+         paralel="methods"=====方法级别的多线程
+         thread-count="3"======最大线程数3个
+    -->
+    <test name="thread">
+        <classes>
+            <class  name="thread.threaddemo"/>
+        </classes>
+    </test>
+</suite>

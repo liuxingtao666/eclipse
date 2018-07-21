@@ -1,0 +1,11 @@
+[
+        {
+                "description":"this is my first mocodemo",
+                "request":{
+                        "uri":"/demo"
+                        },
+                "response":{
+                       "text":"my moco demo"
+                }
+        }
+]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="reportDemo">
+    <test name="report">
+        <classes>
+            <class name="AssertAndLog.demo">
+                <methords>
+                    <include name="test"/>
+                    <include name="test2"/>
+                </methords>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener  class-name="util.ExtentTestNGIReporterListener"/>
+    </listeners>
+</suite>
